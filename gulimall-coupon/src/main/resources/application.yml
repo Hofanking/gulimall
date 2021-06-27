@@ -11,12 +11,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
-  cloud:
-    nacos:
-      config:
-        server-addr: 127.0.0.1:8848
-      discovery:
-        server-addr: 127.0.0.1:8848
+  profiles:
+    active: dev
 
 
 mybatis-plus:
@@ -31,3 +27,8 @@ logging:
   level:
     com.scorpios.gulimall: debug
 
+
+coupon:
+  user:
+    name: zhang
+    age: 22
