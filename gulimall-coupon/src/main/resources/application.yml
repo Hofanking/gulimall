@@ -2,6 +2,8 @@ server:
   port: 5001
 
 spring:
+  application:
+    name: gulimall-coupon
   datasource:
     username: root
     password: 123456
@@ -9,6 +11,13 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+      discovery:
+        server-addr: 127.0.0.1:8848
+
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -20,5 +29,5 @@ mybatis-plus:
 
 logging:
   level:
-    com.atguigu.gulimall: debug
+    com.scorpios.gulimall: debug
 
