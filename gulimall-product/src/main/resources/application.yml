@@ -1,15 +1,11 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
     name: gulimall-product
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-      config:
-        server-addr: 127.0.0.1:8848
+  profiles:
+    active: dev
   datasource:
     username: root
     password: 123456
@@ -23,7 +19,7 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
-      logic-delete-value: 1
+      logic-delete-value: 1  # mybaits-plus 逻辑删除，1代表已删除
       logic-not-delete-value: 0
 
 logging:
