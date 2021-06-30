@@ -13,6 +13,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    alicloud:
+      access-key: LTAI5tJmiWk3yetRyacQZu2o
+      secret-key: U6LrAYxw0Z3Hh2mkoXD8xgaB3pa1yI
+      oss:
+        endpoint: oss-cn-shanghai.aliyuncs.com
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml

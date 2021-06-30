@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 
@@ -57,12 +58,19 @@ public class CategoryController {
         return R.ok();
     }
 
+    @RequestMapping("/update/sort")
+    public R updateSort(@RequestBody CategoryEntity[] category){
+        categoryService.updateBatchById(Arrays.asList(category));
+        return R.ok();
+    }
+
     /**
      * 修改
      */
     @RequestMapping("/update")
     public R update(@RequestBody CategoryEntity category){
-		categoryService.updateById(category);
+//		categoryService.updateById(category);
+        categoryService.updateCascade(category);
 
         return R.ok();
     }

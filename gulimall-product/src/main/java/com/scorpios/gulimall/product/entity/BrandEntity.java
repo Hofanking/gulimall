@@ -1,11 +1,14 @@
 package com.scorpios.gulimall.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
+
+import javax.validation.constraints.NotBlank;
 
 /**
  * 品牌
@@ -39,6 +42,7 @@ public class BrandEntity implements Serializable {
 	/**
 	 * 显示状态[0-不显示；1-显示]
 	 */
+	@TableLogic(value = "1",delval = "0")
 	private Integer showStatus;
 	/**
 	 * 检索首字母
