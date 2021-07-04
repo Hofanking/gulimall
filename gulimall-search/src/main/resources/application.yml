@@ -1,0 +1,13 @@
+server:
+  port: 3001
+
+spring:
+  application:
+    name: gulimall-search
+  profiles:
+    active: dev
+
+logging:
+  level:
+    com.scorpios.gulimall: debug
+
